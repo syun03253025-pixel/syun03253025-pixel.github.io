@@ -122,3 +122,14 @@ const countObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 counters.forEach(c => countObserver.observe(c));
+
+// Game slideshow
+const gameSlides = document.querySelectorAll('.game-slide');
+if (gameSlides.length > 1) {
+  let current = 0;
+  setInterval(() => {
+    gameSlides[current].classList.remove('active');
+    current = (current + 1) % gameSlides.length;
+    gameSlides[current].classList.add('active');
+  }, 2500);
+}
