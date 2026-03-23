@@ -12,10 +12,8 @@ function goToSlide(idx) {
   dots[current].classList.add('active');
 }
 
-function nextSlide() { goToSlide(current + 1); }
-
 function startSlideshow() {
-  slideTimer = setInterval(nextSlide, 4000);
+  slideTimer = setInterval(() => goToSlide(current + 1), 4000);
 }
 
 dots.forEach((dot, i) => {
@@ -31,11 +29,7 @@ startSlideshow();
 // Navbar scroll
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 60) {
-    navbar.classList.add('scrolled');
-  } else {
-    navbar.classList.remove('scrolled');
-  }
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
 }, { passive: true });
 
 // Mobile nav toggle
@@ -44,33 +38,31 @@ const navLinks = document.getElementById('navLinks');
 
 navToggle.addEventListener('click', () => {
   navLinks.classList.toggle('open');
-  const spans = navToggle.querySelectorAll('span');
+  const [s1, s2, s3] = navToggle.querySelectorAll('span');
   if (navLinks.classList.contains('open')) {
-    spans[0].style.transform = 'translateY(7px) rotate(45deg)';
-    spans[1].style.opacity = '0';
-    spans[2].style.transform = 'translateY(-7px) rotate(-45deg)';
+    s1.style.transform = 'translateY(7px) rotate(45deg)';
+    s2.style.opacity = '0';
+    s3.style.transform = 'translateY(-7px) rotate(-45deg)';
   } else {
-    spans[0].style.transform = '';
-    spans[1].style.opacity = '';
-    spans[2].style.transform = '';
+    s1.style.transform = s2.style.opacity = s3.style.transform = '';
+    s2.style.opacity = '';
   }
 });
 
 navLinks.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => {
     navLinks.classList.remove('open');
-    const spans = navToggle.querySelectorAll('span');
-    spans[0].style.transform = '';
-    spans[1].style.opacity = '';
-    spans[2].style.transform = '';
+    navToggle.querySelectorAll('span').forEach(s => {
+      s.style.transform = '';
+      s.style.opacity = '';
+    });
   });
 });
 
 // Menu tabs
-const tabs = document.querySelectorAll('.menu-tab');
-tabs.forEach(tab => {
+document.querySelectorAll('.menu-tab').forEach(tab => {
   tab.addEventListener('click', () => {
-    tabs.forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
     tab.classList.add('active');
     const panel = document.getElementById('tab-' + tab.dataset.tab);
@@ -79,37 +71,65 @@ tabs.forEach(tab => {
 });
 
 // Scroll reveal
-const revealEls = document.querySelectorAll('.section-header, .about-split-content, .about-split-img, .gal-item, .bento-item, .sns-card, .access-row, .btn-contact, .menu-tabs, .insta-photo-item');
+const revealEls = document.querySelectorAll(
+  '.section-header, .about-split-content, .about-split-img, ' +
+  '.gal-item, .bento-item, .sns-card, .access-row, ' +
+  '.btn-contact, .menu-tabs, .insta-photo-item, .bell-teaser, .dm-banner-inner'
+);
 
-revealEls.forEach(el => {
-  el.classList.add('reveal');
-});
+revealEls.forEach(el => el.classList.add('reveal'));
 
-const observer = new IntersectionObserver((entries) => {
+const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, 60 * (Array.from(revealEls).indexOf(entry.target) % 6));
-      observer.unobserve(entry.target);
+      const idx = Array.from(revealEls).indexOf(entry.target);
+      setTimeout(() => entry.target.classList.add('visible'), (idx % 6) * 70);
+      revealObserver.unobserve(entry.target);
     }
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-revealEls.forEach(el => observer.observe(el));
+revealEls.forEach(el => revealObserver.observe(el));
 
-// Staggered reveal for grid items
-const staggerGroups = [
-  '.gal-item',
-  '.bento-item',
-  '.sns-card',
-  '.insta-photo-item',
-  '.flavor-grid span',
-];
-
-staggerGroups.forEach(selector => {
-  const els = document.querySelectorAll(selector);
-  els.forEach((el, i) => {
-    el.style.transitionDelay = `${i * 60}ms`;
+// Stagger grid items
+['.gal-item', '.bento-item', '.sns-card', '.insta-photo-item', '.flavor-grid span'].forEach(sel => {
+  document.querySelectorAll(sel).forEach((el, i) => {
+    el.style.transitionDelay = `${i * 55}ms`;
   });
 });
+
+// Counter animation for stats
+const counters = document.querySelectorAll('.stat-num');
+const countObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    const raw = el.textContent.trim();
+    const num = parseFloat(raw);
+    if (isNaN(num)) return;
+    const suffix = raw.replace(/[\d.]/g, '');
+    let start = 0;
+    const duration = 1200;
+    const step = 16;
+    const increment = num / (duration / step);
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= num) { start = num; clearInterval(timer); }
+      el.textContent = Number.isInteger(num) ? Math.floor(start) + suffix : start.toFixed(1) + suffix;
+    }, step);
+    countObserver.unobserve(el);
+  });
+}, { threshold: 0.5 });
+
+counters.forEach(c => countObserver.observe(c));
+
+// Game slideshow
+const gameSlides = document.querySelectorAll('.game-slide');
+if (gameSlides.length > 1) {
+  let current = 0;
+  setInterval(() => {
+    gameSlides[current].classList.remove('active');
+    current = (current + 1) % gameSlides.length;
+    gameSlides[current].classList.add('active');
+  }, 2800);
+}
