@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>夜カフェ&バー アーバン・シャビー</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Noto+Sans+JP:wght@300;400;500&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <meta name="google-site-verification" content="sc6tVj5RU6tn2dRPVYnQeWuwIaUH5sOtZF8w0-Qugf0" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <svg viewBox="0 0 480 110" xmlns="http://www.w3.org/2000/svg" class="nav-logo-svg">
+          <rect x="30" y="12" width="420" height="1.5" fill="#c9a96e" opacity="0.5"/>
+          <text x="240" y="38" font-family="'Arial Black','Impact','Helvetica Neue',sans-serif" font-size="13" font-weight="900" fill="#c9a96e" text-anchor="middle" letter-spacing="8" font-style="italic">カフェ ＆ バー</text>
+          <text x="240" y="88" font-family="'Arial Black','Impact','Helvetica Neue',sans-serif" font-size="46" font-weight="900" fill="#f5f0eb" text-anchor="middle" letter-spacing="3" font-style="italic">アーバン・シャビー</text>
+          <rect x="30" y="98" width="420" height="1.5" fill="#c9a96e" opacity="0.5"/>
+        </svg>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#sns">SNS</a></li>
+        <li><a href="#access">Access</a></li>
+        <li><a href="#contact" class="nav-cta">予約</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active" style="background-image:url('images/img_05.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('images/img_15.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('images/img_17.jpg')"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-noise"></div>
+    <div class="hero-content">
+      <div class="hero-badge">OPEN 21:00 → 翌5:00</div>
+      <p class="hero-sub">Fukuoka Roppomatsu</p>
+      <h1>URBAN<br>SHABBY</h1>
+      <p class="hero-desc">六本松の夜を彩る、隠れ家カフェ&バー</p>
+      <div class="hero-tags">
+        <span>エアシーシャ</span>
+        <span>カラオケ</span>
+        <span>映えスイーツ</span>
+        <span>ダーツ</span>
+      </div>
+      <a href="#menu" class="btn-hero">MENU を見る</a>
+    </div>
+    <div class="hero-scroll"><span></span><small>SCROLL</small></div>
+    <div class="hero-dots" id="heroDots">
+      <span class="hero-dot active"></span>
+      <span class="hero-dot"></span>
+      <span class="hero-dot"></span>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="about-split">
+      <div class="about-split-img">
+        <img src="images/img_17.jpg" alt="店内" />
+        <div class="about-split-img2">
+          <img src="images/img_15.jpg" alt="店内" />
+        </div>
+      </div>
+      <div class="about-split-content">
+        <p class="section-label">ABOUT</p>
+        <h2>アーバン・シャビーとは</h2>
+        <p>2025年11月、福岡・六本松にオープンした<br>スタイリッシュな夜カフェ＆バー。</p>
+        <p>ネオン輝くおしゃれな空間で、エアシーシャ・映えスイーツ・カクテルが楽しめます。女子会、デート、2軒目のチルタイムに。</p>
+        <div class="about-stats">
+          <div class="stat"><span class="stat-num">5</span><span class="stat-label">シーシャフレーバー</span></div>
+          <div class="stat"><span class="stat-num">5h</span><span class="stat-label">深夜5時まで</span></div>
+          <div class="stat"><span class="stat-num">2F</span><span class="stat-label">六本松駅5分</span></div>
+        </div>
+        <div class="about-tags">
+          <span>#シーシャ</span><span>#映えスイーツ</span><span>#個室あり</span>
+          <span>#カラオケ</span><span>#ダーツ</span><span>#深夜営業</span>
+        </div>
+        <div class="bell-teaser">
+          <span class="bell-icon">🔔</span>
+          <span class="bell-text">テーブルにある🔔を鳴らしたら。。。。。</span>
+          <span class="bell-hint">来てからのお楽しみ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-header light">
+        <p class="section-label">GALLERY</p>
+        <h2>フォトギャラリー</h2>
+      </div>
+    </div>
+    <div class="gallery-masonry">
+      <div class="gal-item gal-tall"><img src="images/img_16.jpg" alt="シーシャ" /><div class="gal-overlay"><span>シーシャバーカウンター</span></div></div>
+      <div class="gal-item"><img src="images/img_04.jpg" alt="クリームソーダ" /><div class="gal-overlay"><span>クリームソーダ</span></div></div>
+      <div class="gal-item"><img src="images/img_08.jpg" alt="フルーツドリンク" /><div class="gal-overlay"><span>フルーツドリンク</span></div></div>
+      <div class="gal-item gal-wide"><img src="images/img_15.jpg" alt="店内ソファ" /><div class="gal-overlay"><span>店内ソファ席</span></div></div>
+      <div class="gal-item gal-tall"><img src="images/img_10.jpg" alt="ネオン" /><div class="gal-overlay"><span>GOOD VIBES ONLY</span></div></div>
+      <div class="gal-item"><img src="images/img_14.jpg" alt="フード" /><div class="gal-overlay"><span>フードメニュー</span></div></div>
+      <div class="gal-item"><img src="images/img_05.jpg" alt="ネオン内装" /><div class="gal-overlay"><span>ネオン内装</span></div></div>
+      <div class="gal-item"><img src="images/img_09.jpg" alt="ブルークリームソーダ" /><div class="gal-overlay"><span>ブルークリームソーダ</span></div></div>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu">
+    <div class="container">
+      <div class="section-header light">
+        <p class="section-label">MENU</p>
+        <h2>メニュー</h2>
+      </div>
+      <div class="menu-tabs">
+        <button class="menu-tab active" data-tab="sisha">🌿 シーシャ</button>
+        <button class="menu-tab" data-tab="alcohol">🍸 アルコール</button>
+        <button class="menu-tab" data-tab="nonalcohol">🧃 ノンアルコール</button>
+        <button class="menu-tab" data-tab="food">🍟 フード</button>
+      </div>
+
+      <!-- シーシャ -->
+      <div class="menu-panel active" id="tab-sisha">
+        <div class="menu-panel-inner">
+          <div class="menu-panel-img"><img src="images/karaoke2.jpg" alt="エアシーシャ" /></div>
+          <div class="menu-panel-content">
+            <div class="menu-panel-header">
+              <h3>エアシーシャ</h3>
+              <p class="menu-panel-catch">ノンニコチン・ノンタール×エアミストの爆煙で、映える夜を。<br>火も使わないので匂いもつかない、香りだけを楽しむ新感覚アロマ体験。</p>
+            </div>
+            <div class="menu-panel-prices">
+              <div class="price-row"><span>本体貸出し（1時間）</span><span>¥1,650</span></div>
+              <div class="price-row"><span>リキッド貸出し（1個）</span><span>¥1,100</span></div>
+              <p class="price-note">※ 自動延長：1時間ごとに ¥1,650 追加</p>
+            </div>
+            <div class="flavor-section">
+              <p class="flavor-title">— 人気フレーバー —</p>
+              <div class="flavor-grid">
+                <span>1. ダブルアップル</span><span>2. フレッシュレモネード</span>
+                <span>3. カフェモカ</span><span>4. トロピカルグアバ</span>
+                <span>5. ジャスミンティー</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- アルコール -->
+      <div class="menu-panel" id="tab-alcohol">
+        <div class="menu-panel-inner">
+          <div class="menu-panel-img"><img src="images/img_08.jpg" alt="アルコール" /></div>
+          <div class="menu-panel-content">
+            <div class="drink-cols">
+              <div class="drink-col">
+                <h4>NOMIHODAI</h4>
+                <div class="price-row highlight"><span>🎉 飲み放題（1時間）</span><span>¥2,200</span></div>
+                <p class="price-note">※ 自動延長：1時間ごとに ¥1,650 追加</p>
+                <h4>SHOT / BEER</h4>
+                <div class="price-row"><span>各種ショット・シャンパン</span><span>要相談</span></div>
+                <div class="price-row"><span>ビール</span><span>¥880</span></div>
+                <div class="price-row"><span>シャンディガフ</span><span>¥880</span></div>
+                <h4>WINE</h4>
+                <div class="price-row"><span>赤ワイン／白ワイン</span><span>¥770</span></div>
+                <div class="price-row"><span>ごろごろ果実の特製サングリア</span><span>¥880</span></div>
+                <div class="price-row"><span>キティ / オペレーター</span><span>¥770</span></div>
+                <div class="price-row"><span>カリモーチョ / スプリッツァー</span><span>¥770</span></div>
+                <h4>WHISKY</h4>
+                <div class="price-row"><span>角</span><span>¥660</span></div>
+                <div class="price-row"><span>山崎 / 白州ハイボール</span><span>¥1,100</span></div>
+                <div class="price-row"><span>響</span><span>¥1,650</span></div>
+                <div class="price-row"><span>山崎12年</span><span>¥2,200</span></div>
+              </div>
+              <div class="drink-col">
+                <h4>GIN</h4>
+                <div class="price-row"><span>ジントニック / ジンコーク</span><span>¥770</span></div>
+                <div class="price-row"><span>ジンパック / オレンジブロッサム</span><span>¥770</span></div>
+                <h4>RUM</h4>
+                <div class="price-row"><span>ラムコーク / ラムトニック</span><span>¥770</span></div>
+                <div class="price-row"><span>ラムオレンジ / モヒート</span><span>¥770</span></div>
+                <h4>VODKA</h4>
+                <div class="price-row"><span>ブルドッグ / ソルティドッグ</span><span>¥770</span></div>
+                <div class="price-row"><span>モスコミュール</span><span>¥770</span></div>
+                <div class="price-row"><span>スクリュードライバー</span><span>¥770</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ノンアルコール -->
+      <div class="menu-panel" id="tab-nonalcohol">
+        <div class="menu-panel-inner">
+          <div class="menu-panel-img"><img src="images/img_04.jpg" alt="ノンアルコール" /></div>
+          <div class="menu-panel-content">
+            <div class="drink-cols">
+              <div class="drink-col">
+                <h4>NON ALCOHOLIC <span class="price-badge">各¥660</span></h4>
+                <div class="price-row sm"><span>レモンスカッシュ</span></div>
+                <div class="price-row sm"><span>グレープフルーツレモンスカッシュ</span></div>
+                <div class="price-row sm"><span>ストロベリーソーダ / ベリーレモネード</span></div>
+                <div class="price-row sm"><span>ベリーソーダ / メロンソーダ</span></div>
+                <div class="price-row sm"><span>シトラススパーク / ピーチスカッシュ</span></div>
+                <div class="price-row sm"><span>サンセットオレンジ / ブルーラグーン</span></div>
+                <div class="price-row sm"><span>シャーリーテンプル / まるで梅酒なソーダ</span></div>
+                <h4>CREAM SODA</h4>
+                <div class="price-row"><span>昔懐かしクリームソーダ</span><span>¥880</span></div>
+                <div class="price-row"><span>ブルーハワイクリームソーダ</span><span>¥880</span></div>
+                <div class="price-row"><span>レモン / グレープクリームソーダ</span><span>¥880</span></div>
+                <div class="price-row"><span>鬼ストロベリークリームソーダ</span><span>¥1,100</span></div>
+              </div>
+              <div class="drink-col">
+                <h4>FRUIT SODA <span class="price-badge">各¥880</span></h4>
+                <div class="price-row sm"><span>パイン / ストロベリー / グレープフルーツ</span></div>
+                <div class="price-row sm"><span>マンゴー / ブルーベリー / レモン</span></div>
+                <h4>SOFT DRINK <span class="price-badge">各¥550</span></h4>
+                <div class="price-row sm"><span>コーラ / ラムネ / ジンジャーエール</span></div>
+                <div class="price-row sm"><span>パイン / オレンジ / アップル</span></div>
+                <div class="price-row sm"><span>グレープフルーツ / 牛乳 / プロテイン</span></div>
+                <div class="price-row sm"><span>緑茶 / 烏龍茶 / ジャスミン茶</span></div>
+                <div class="price-row sm"><span>炭酸水 / トニックウォーター</span></div>
+                <div class="price-row sm"><span>コーヒー HOT/ICE / カフェラテ HOT/ICE</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- フード -->
+      <div class="menu-panel" id="tab-food">
+        <div class="menu-panel-inner">
+          <div class="menu-panel-img"><img src="images/img_14.jpg" alt="フード" /></div>
+          <div class="menu-panel-content">
+            <div class="drink-cols">
+              <div class="drink-col">
+                <h4>FOOD</h4>
+                <div class="price-row"><span>唐揚げ</span><span>¥880</span></div>
+                <div class="price-row"><span>ピザ</span><span>¥660</span></div>
+                <div class="price-row"><span>フライドポテト</span><span>¥440</span></div>
+                <div class="price-row"><span>塩枝豆</span><span>¥330</span></div>
+                <h4>SWEETS</h4>
+                <div class="price-row"><span>バニラアイス</span><span>¥330</span></div>
+                <div class="price-row"><span>焼きドーナツ（豆乳）</span><span>¥440</span></div>
+                <div class="price-row"><span>焼きドーナツ（チョコ）</span><span>¥440</span></div>
+                <div class="price-row"><span>ガトーショコラ</span><span>¥770</span></div>
+                <div class="price-row"><span>チーズケーキ</span><span>¥660</span></div>
+                <div class="price-row highlight"><span>🍰 SWEETセット（スイーツ＋ドリンク）</span><span>-¥220</span></div>
+                <p class="price-note">※ スイーツ＋ドリンク単品合計から ¥220 OFF</p>
+                <div class="price-row"><span>お菓子食べ放題</span><span>サービス</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">FEATURES</p>
+        <h2>こだわりポイント</h2>
+      </div>
+      <div class="features-bento">
+        <div class="bento-item bento-neon">
+          <img src="images/img_05.jpg" alt="ネオン空間" />
+          <div class="bento-overlay">
+            <span class="bento-num">01</span>
+            <h3>SNS映えする空間</h3>
+            <p>ネオン輝くおしゃれなインテリア。とっておきの1枚を。</p>
+          </div>
+        </div>
+        <div class="bento-item bento-room">
+          <img src="images/room.jpg" alt="個室" />
+          <div class="bento-overlay">
+            <span class="bento-num">02</span>
+            <h3>個室2部屋完備</h3>
+            <p>貸切1時間 ¥5,500</p>
+          </div>
+        </div>
+        <div class="bento-item bento-karaoke">
+          <img src="images/karaoke.jpg" alt="カラオケ" />
+          <div class="bento-overlay">
+            <span class="bento-num">03</span>
+            <h3>LIVE DAM STADIUM</h3>
+            <p>本格カラオケ完備</p>
+          </div>
+        </div>
+        <div class="bento-item bento-night">
+          <img src="images/img_10.jpg" alt="深夜営業" />
+          <div class="bento-overlay">
+            <span class="bento-num">04</span>
+            <h3>深夜5時まで営業</h3>
+            <p>終電後も楽しめる隠れ家バー</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SNS -->
+  <section id="sns">
+    <div class="container">
+      <div class="section-header light">
+        <p class="section-label">SNS</p>
+        <h2>フォローしてね</h2>
+      </div>
+      <div class="sns-grid">
+        <a href="https://www.instagram.com/bar.urban.shabby/" target="_blank" rel="noopener" class="sns-card sns-instagram">
+          <div class="sns-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></div>
+          <div class="sns-info"><p class="sns-name">Instagram</p><p class="sns-handle">@bar.urban.shabby</p><p class="sns-desc">最新情報・映え写真を毎日更新中</p></div>
+          <div class="sns-arrow">→</div>
+        </a>
+        <a href="https://www.hotpepper.jp/strJ004492691/" target="_blank" rel="noopener" class="sns-card sns-hotpepper">
+          <div class="sns-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="10" stroke="currentColor" stroke-width="1.8"/><path d="M8 8h2v8H8zM14 8h2v8h-2z" fill="currentColor"/></svg></div>
+          <div class="sns-info"><p class="sns-name">ホットペッパー</p><p class="sns-handle">カフェ&バー アーバン・シャビー</p><p class="sns-desc">ネット予約・クーポン・口コミ</p></div>
+          <div class="sns-arrow">→</div>
+        </a>
+        <a href="https://s.tabelog.com/fukuoka/A4001/A400105/40072070/" target="_blank" rel="noopener" class="sns-card sns-tabelog">
+          <div class="sns-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+          <div class="sns-info"><p class="sns-name">食べログ</p><p class="sns-handle">アーバン・シャビー</p><p class="sns-desc">口コミ・写真・評価をチェック</p></div>
+          <div class="sns-arrow">→</div>
+        </a>
+      </div>
+      <div class="instagram-embed-wrap">
+        <p class="insta-follow-label">最新の投稿は Instagram をチェック</p>
+        <div class="insta-photos">
+          <a href="https://www.instagram.com/bar.urban.shabby/" target="_blank" rel="noopener" class="insta-photo-item"><img src="images/img_04.jpg" alt="" /><div class="insta-overlay"><span>Instagram</span></div></a>
+          <a href="https://www.instagram.com/bar.urban.shabby/" target="_blank" rel="noopener" class="insta-photo-item"><img src="images/img_08.jpg" alt="" /><div class="insta-overlay"><span>Instagram</span></div></a>
+          <a href="https://www.instagram.com/bar.urban.shabby/" target="_blank" rel="noopener" class="insta-photo-item"><img src="images/img_05.jpg" alt="" /><div class="insta-overlay"><span>Instagram</span></div></a>
+          <a href="https://www.instagram.com/bar.urban.shabby/" target="_blank" rel="noopener" class="insta-photo-item"><img src="images/img_15.jpg" alt="" /><div class="insta-overlay"><span>Instagram</span></div></a>
+          <a href="https://www.instagram.com/bar.urban.shabby/" target="_blank" rel="noopener" class="insta-photo-item"><img src="images/img_14.jpg" alt="" /><div class="insta-overlay"><span>Instagram</span></div></a>
+          <a href="https://www.instagram.com/bar.urban.shabby/" target="_blank" rel="noopener" class="insta-photo-item"><img src="images/img_17.jpg" alt="" /><div class="insta-overlay"><span>Instagram</span></div></a>
+        </div>
+        <a href="https://www.instagram.com/bar.urban.shabby/" target="_blank" rel="noopener" class="btn-instagram-follow">
+          <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
+          @bar.urban.shabby をフォロー
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Access -->
+  <section id="access">
+    <div class="container">
+      <div class="section-header light">
+        <p class="section-label">ACCESS</p>
+        <h2>アクセス</h2>
+      </div>
+      <div class="access-grid">
+        <div class="access-info">
+          <div class="access-row"><h3>住所</h3><p>福岡県福岡市中央区六本松2丁目2-7 2F</p></div>
+          <div class="access-row"><h3>アクセス</h3><p>福岡市地下鉄七隈線「六本松駅」2番出口より徒歩約5分</p></div>
+          <div class="access-row"><h3>営業時間</h3><p>火〜日・祝日・祝前日　21:00 〜 翌5:00<br><span class="closed">定休日：毎週月曜</span></p></div>
+          <div class="access-row"><h3>電話番号</h3><p><a href="tel:07013852527">070-1385-2527</a></p></div>
+          <div class="access-row"><h3>Instagram</h3><p><a href="https://www.instagram.com/bar.urban.shabby/" target="_blank" rel="noopener">@bar.urban.shabby</a></p></div>
+        </div>
+        <div class="access-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.876244800196!2d130.37770827618408!3d33.579099719999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354193e353f37177%3A0x507938f7f2c42e34!2z5aSn44Kr44OV44KnJuODkOODvCDjgqLjg7zjgqTjg7vjgb7jg7zjgr3jg7zjg7MoJiDjgqvjgqnjgq_jgqIp!5e0!3m2!1sja!2sjp!4v1708000000000!5m2!1sja!2sjp" width="100%" height="380" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="マップ"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="contact-hero">
+      <img src="images/img_17.jpg" alt="店内" class="contact-bg" />
+      <div class="contact-hero-overlay"></div>
+      <div class="container">
+        <div class="section-header light">
+          <p class="section-label">CONTACT</p>
+          <h2>予約・お問合せ</h2>
+        </div>
+        <div class="contact-dm-banner">
+          <div class="dm-banner-inner">
+            <div class="dm-banner-icon">
+              <svg viewBox="0 0 24 24" fill="none" width="32" height="32"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+            </div>
+            <div class="dm-banner-text">
+              <p class="dm-banner-title">Instagram DM で気軽に予約</p>
+              <p class="dm-banner-sub">「予約したい」とメッセージするだけでOK！日時・人数を送ってね。</p>
+            </div>
+            <a href="https://ig.me/m/bar.urban.shabby" target="_blank" rel="noopener" class="btn-dm-reserve">
+              DMで予約する →
+            </a>
+          </div>
+        </div>
+        <div class="contact-btns">
+          <a href="tel:07013852527" class="btn-contact"><span class="btn-icon">📞</span>電話で予約<small>070-1385-2527</small></a>
+          <a href="https://www.hotpepper.jp/strJ004492691/" target="_blank" rel="noopener" class="btn-contact"><span class="btn-icon">📌</span>ホットペッパーで予約</a>
+          <a href="https://ig.me/m/bar.urban.shabby" target="_blank" rel="noopener" class="btn-contact instagram"><span class="btn-icon">💬</span>Instagram DMで予約<small>一番かんたん！</small></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo-wrap">
+      <svg viewBox="0 0 480 110" xmlns="http://www.w3.org/2000/svg" class="footer-logo-svg">
+        <rect x="30" y="12" width="420" height="1.5" fill="#c9a96e" opacity="0.5"/>
+        <text x="240" y="38" font-family="'Arial Black','Impact','Helvetica Neue',sans-serif" font-size="13" font-weight="900" fill="#c9a96e" text-anchor="middle" letter-spacing="8" font-style="italic">カフェ ＆ バー</text>
+        <text x="240" y="88" font-family="'Arial Black','Impact','Helvetica Neue',sans-serif" font-size="46" font-weight="900" fill="#f5f0eb" text-anchor="middle" letter-spacing="3" font-style="italic">アーバン・シャビー</text>
+        <rect x="30" y="98" width="420" height="1.5" fill="#c9a96e" opacity="0.5"/>
+      </svg>
+    </div>
+    <p>福岡市中央区六本松2丁目2-7 2F　｜　Tel: 070-1385-2527</p>
+    <p>営業時間：火〜日 21:00〜翌5:00　定休日：月曜</p>
+    <p class="footer-copy">&copy; 2025 URBAN SHABBY. All rights reserved.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
